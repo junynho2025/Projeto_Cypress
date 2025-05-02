@@ -1,0 +1,16 @@
+{
+  "name": "cypress2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "open:chrome": "npx cypress open --browser chrome",
+    "run:chrome": "npx cypress run --browser chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.3.2"
+  }
+}
