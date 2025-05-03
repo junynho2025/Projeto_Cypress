@@ -57,6 +57,13 @@ O projeto cobre os seguintes cenários:
 - ✅ Adição de produto ao carrinho: Valida a seleção de produtos.
 - ✅ Finalização da compra: Simula o checkout e confirma a conclusão da compra.
 
+## 📊 Relatórios e Logs
+Após a execução dos testes, os relatórios podem ser encontrados na pasta cypress/reports. Para gerar um relatório visual:
+```
+npx cypress run --reporter mochawesome
+```
+![Image](https://github.com/user-attachments/assets/98418890-e694-4be1-9d29-fd5d676ac862)
+
 ## 📜 Contribuição
 Caso queira contribuir para o projeto:
 - Faça um fork deste repositório;
