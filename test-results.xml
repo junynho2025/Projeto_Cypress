@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="5.506" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2025-05-03T03:25:15" tests="0" file="cypress\e2e\realizar_compra.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Realizar Compra" timestamp="2025-05-03T03:25:15" tests="1" time="5.503" failures="0">
-    <testcase name="Realizar Compra Finalizar compra" time="3.363" classname="Finalizar compra">
-    </testcase>
-  </testsuite>
-</testsuites>

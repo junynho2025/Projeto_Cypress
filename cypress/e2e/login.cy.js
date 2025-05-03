@@ -1,7 +1,11 @@
 describe('Login Page', () => {
-    it('Realizar login com sucesso', () => {
+
+    beforeEach(() => {
         //Arrange
         cy.visit('https://www.saucedemo.com/')
+    })
+
+    it('Realizar login com sucesso', () => {
         //Act
         cy.get('[data-test="username"]').type('standard_user')
         cy.get('[data-test="password"]').type('secret_sauce')
@@ -13,8 +17,6 @@ describe('Login Page', () => {
     })
 
     it('Realizar login com usuário inválido', () => {
-        //Arrange
-        cy.visit('https://www.saucedemo.com/')
         //Act
         cy.get('[data-test="username"]').type('userInvalido')
         cy.get('[data-test="password"]').type('senhaerrada')
