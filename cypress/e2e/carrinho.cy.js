@@ -1,29 +1,25 @@
+import Login from "../pages/login/index.js" 
+import Carrinho from "../pages/carrinho/index.js"
+
 describe('Carrinho', () => {
 
     beforeEach(() => {
         //Arrange
-        cy.visit('https://www.saucedemo.com/')
-        cy.get('[data-test="username"]').type('standard_user')
-        cy.get('[data-test="password"]').type('secret_sauce')
-        cy.get('[data-test="login-button"]').click()
+        Login.visitarPaginaLogin()
+        Login.realizarLogin()
     })
 
     it('Adicionar produto ao carrinho', () => {
         //Act
-        cy.get('[data-test="add-to-cart-sauce-labs-fleece-jacket"]').click()
-        cy.screenshot('adicionar-produto-carrinho')
+        Carrinho.clickarProduto()
         //Assert
-        cy.get('[data-test="shopping-cart-link"]').click()
-        cy.get('.inventory_item_name').should('contain.text', 'Sauce Labs Fleece Jacket')
+        Carrinho.validarProduto()
     })
 
     it('Validar se carrinho contem elementos', () => {
-        //Arrange
-        cy.get('[data-test="add-to-cart-sauce-labs-fleece-jacket"]').click()
-        cy.get('[data-test="shopping-cart-link"]').click()
         //Act
-        cy.screenshot('validar-carrinho')
+        Carrinho.clickarProduto()
         //Assert
-        cy.get('.cart_item').should('have.length', 1)
+       Carrinho.validarItemCarrinho
     })
 })
